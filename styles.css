@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #2E1D14; /* Cor de fundo marrom amadeirado mais escuro */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparente */
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.name-container {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    width: 300px; /* Largura fixa da caixa */
+    height: 300px; /* Altura fixa da caixa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinha os elementos verticalmente */
+    align-items: center;
+    border: 10px solid #4B3627; /* Borda marrom amadeirado mais clara */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    padding-bottom: 30px; /* Espaçamento na parte inferior para os botões */
+    position: relative; /* Para posicionar a sombra do sapo */
+}
+
+.frog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ocupa o espaço disponível na caixa */
+}
+
+.frog-image {
+    width: 75%; /* Ajusta o tamanho do sapo para 55% */
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    background-color: #8B4513; /* Cor de madeira marrom */
+    color: white;
+    padding: 15px 30px; /* Aumenta o tamanho dos botões para um clique mais fácil */
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #A0522D; /* Cor de madeira marrom com detalhes */
+}
+
+
+.jump-animation {
+    animation: jumpAnimation 0.5s;
+}
+
+@keyframes jumpAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+/* Estilos da caixa dos botões */
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Botões na parte inferior */
+}
+
+/* Estilos dos botões */
+.jump-button,
+.eat-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #8B4513; /* Cor de madeira */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.jump-button:hover,
+.eat-button:hover {
+    background-color: #A0522D; /* Cor de madeira mais escura */
+}
+
+.eat-button {
+    background-color: #8B4513; /* Cor de madeira */
+    color: white;
+}
+
+.eat-button:hover {
+    background-color: #A0522D; /* Cor de madeira mais escura */
+}
