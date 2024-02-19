@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapo Animado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Nome do Sapo</h2>
+            <input type="text" id="sapoNameInput">
+            <button onclick="setSapoName()">Confirmar</button>
+        </div>
+    </div>
+
+    <div class="container">
+              <div class="name-container" id="nameContainer">
+            <p id="sapoName">Sapo</p>
+        </div>
+            <div class="frog-container">
+                <img src="sapoparado.png" alt="Sapo" class="frog-image" id="frogImage">
+            </div>
+            <div class="button-box">
+                <button class="jump-button" onclick="jump()">Pular</button>
+                <button class="eat-button" onclick="eat()">Comer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
